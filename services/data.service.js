@@ -93,7 +93,7 @@ const addBulkData = async(params) => {
         JSON.parse(params,(a,b)=>{arrayDataList.push(b)})
         for (let a=0; a < (arrayDataList.length-1)/7;a++){
             const query =   `INSERT INTO praktikan_webdev values('${arrayDataList[a*7]}',
-                            '${arrayDataList[(a*7)+1]}','${arrayDataList[(a*7)+2]}','${arrayDataList[(a*7)+2]}',
+                            '${arrayDataList[(a*7)+1]}','${arrayDataList[(a*7)+2]}','${arrayDataList[(a*7)+3]}',
                             '${arrayDataList[(a*7)+4]}','${arrayDataList[(a*7)+5]}')`;
             const data = await databaseQuery(query);
 

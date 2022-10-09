@@ -26,7 +26,7 @@ const deleteDatabyEmail = [
 const addData = [
      body('nama').isLength({min: 8}),
      body('jenis_kelamin').isIn(['L','P']),
-     body('angkatan').isNumeric({gt: 2018}),
+     body('angkatan').isFloat({min:2018}),
      body('email').isEmail(),
      body('telepon').isLength({min: 12}),
      body('deskripsi').not().isEmpty(),
@@ -36,7 +36,7 @@ const addData = [
 const addBulkData = [
      body('*.nama').isLength({min: 8}),
      body('*.jenis_kelamin').isIn(['L','P']),
-     body('*.angkatan').isNumeric({gt: 2018}),
+     body('*.angkatan').isFloat({min:2018}),
      body('*.email').isEmail(),
      body('*.telepon').isLength({min: 12}),
      body('*.deskripsi').not().isEmpty(),
